@@ -89,8 +89,8 @@ app.get('/callback', async (req, res) => {
       <a href="/" style="font-size:18px;">&#8592; Back to Home</a>
     `);
   } catch (err) {
-    console.error('🔥 Error details:', err.response?.data || err.message);
-    res.send('❌ Error retrieving token or now playing data.<br><pre>' +
+    console.error('Error details:', err.response?.data || err.message);
+    res.send('Error retrieving token or now playing data.<br><pre>' +
       JSON.stringify(err.response?.data || err.message, null, 2) + '</pre>');
   }
 });
